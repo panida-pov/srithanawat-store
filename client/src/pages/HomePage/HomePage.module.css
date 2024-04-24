@@ -1,0 +1,72 @@
+.Banner {
+  height: 24rem;
+  background: linear-gradient(#00326a, #0659b2);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+.TextContainer {
+  width: 50%;
+  min-width: 21rem;
+  height: 80%;
+  padding: 0rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.TextContainer h1 {
+  font-size: 2rem;
+}
+
+.TextBox {
+  display: flex;
+}
+
+.TextBox p {
+  padding-left: 0.4rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.ImgContainer {
+  width: 30%;
+  min-width: 15rem;
+}
+
+.ImgContainer img {
+  width: 100%;
+  height: auto;
+}
+
+.Button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.Button button {
+  height: 2rem;
+  width: 40%;
+  min-width: 6rem;
+  border-radius: 1rem;
+  padding: 0.2rem 1.2rem;
+  background-color: #f2f2f2;
+  color: #215f9a;
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: "Sukhumvit", "Tahoma", sans-serif;
+  transition: background-color 0.2s;
+  border: none;
+  margin: 0.3rem 0.6rem;
+}
+
+.Button button:hover {
+  cursor: pointer;
+  background-color: #c1e5f5;
+}

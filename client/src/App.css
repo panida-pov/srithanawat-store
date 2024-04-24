@@ -1,0 +1,16 @@
+html,
+body {
+  height: 100%;
+  font-size: 18px;
+  font-family: "Sukhumvit", "Tahoma", sans-serif;
+  background-color: #00326a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Sukhumvit";
+  src: url("./assets/fonts/SukhumvitSet-Medium.ttf") format("truetype");
+}
