@@ -1,0 +1,12 @@
+.Map {
+  position: relative;
+  top: 10%;
+  height: 68%;
+  margin: 1rem;
+  text-align: center;
+}
+
+.Map iframe {
+  height: 100%;
+  width: 80%;
+}
