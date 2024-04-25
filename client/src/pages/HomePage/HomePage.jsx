@@ -2,8 +2,10 @@ import styles from "./HomePage.module.css";
 import bannerImg_1 from "../../assets/images/banner_1.jpg";
 import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
 import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
+  const navigate = useNavigate();
   return (
     <>
       <div className={styles.Banner}>
@@ -44,8 +46,8 @@ function HomePage() {
           </div>
 
           <div className={styles.Button}>
-            <button>สินค้า</button>
-            <button>บริการ</button>
+            <button onClick={() => navigate("/products")}>สินค้า</button>
+            <button onClick={() => navigate("/services")}>บริการ</button>
           </div>
         </div>
 

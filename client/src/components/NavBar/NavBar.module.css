@@ -5,6 +5,10 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .Logo {
@@ -65,25 +69,31 @@
 
 .Nav ul {
   display: flex;
-  color: #fff;
 }
 
 .Nav li {
   list-style: none;
+}
+
+.Nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
   width: 6rem;
   padding: 0.38rem 0rem;
   margin-bottom: 0.4rem;
   text-align: center;
-  border-bottom: 0.18rem solid transparent;
   transition: background-color 0.3s;
 }
 
-.Nav li:hover {
-  cursor: pointer;
+.Nav a:hover {
   background-color: rgba(193, 229, 245, 0.08);
-  border-bottom: 0.18rem solid #fff;
 }
 
-.Nav li.active {
+.Nav a.inactive {
+  border-bottom: 0.18rem solid transparent;
+}
+
+.Nav a.active {
   border-bottom: 0.18rem solid #fff;
 }

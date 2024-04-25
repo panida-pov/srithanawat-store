@@ -1,6 +1,7 @@
 html,
 body {
-  height: 100%;
+  height: 100vh;
+  width: 100%;
   font-size: 18px;
   font-family: "Sukhumvit", "Tahoma", sans-serif;
   background-color: #00326a;

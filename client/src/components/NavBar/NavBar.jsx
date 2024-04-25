@@ -1,7 +1,7 @@
 import styles from "./NavBar.module.css";
 import logo from "../../assets/images/web_logo.jpg";
 import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
-import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
   const navList = {
@@ -11,28 +11,20 @@ function NavBar() {
     contact: "ติดต่อเรา",
   };
 
-  const [currentPage, setCurrentPage] = useState("home");
-
-  const handleClick = (event) => {
-    setCurrentPage(event.target.id);
-  };
-
-  const handleNavStyle = (key) => {
-    return key === currentPage ? styles.active : "";
-  };
-
   const renderNav = () => {
     return Object.keys(navList).map((navEng) => {
       return (
-        <li
-          key={navEng}
-          id={navEng}
-          onClick={handleClick}
-          className={handleNavStyle(navEng)}
-        >
-          {navList[navEng]}
-          <br />
-          {navEng.toUpperCase()}
+        <li key={navEng}>
+          <NavLink
+            to={`/${navEng}`}
+            className={({ isActive }) => {
+              return isActive ? styles.active : styles.inactive;
+            }}
+          >
+            {navList[navEng]}
+            <br />
+            {navEng.toUpperCase()}
+          </NavLink>
         </li>
       );
     });
