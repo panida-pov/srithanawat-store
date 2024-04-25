@@ -7,15 +7,16 @@ import AccessTimeRoundedIcon from "@mui/icons-material/AccessTimeRounded";
 function Footer() {
   return (
     <div className={styles.Footer}>
-      <img src={logo} alt="Logo" />
-      <div className={styles.Address}>
-        <p style={{ fontSize: "1.25rem" }}>ศรีธนาวัฒน์</p>
-        <p>
-          43/109 หมู่ที่ 5 ซอยสุขาประขาสรรค์ 2 ถนนแจ้งวัฒนะ อำเภอปากเกร็ด
-          จังหวัดนนทบุรี 11120
-        </p>
+      <div className={styles.Logo}>
+        <img src={logo} alt="Logo" />
+        <div className={styles.Address}>
+          <p style={{ fontSize: "1.25rem" }}>ศรีธนาวัฒน์</p>
+          <p>
+            43/109 หมู่ที่ 5 ซอยสุขาประขาสรรค์ 2 ถนนแจ้งวัฒนะ อำเภอปากเกร็ด
+            จังหวัดนนทบุรี 11120
+          </p>
+        </div>
       </div>
-
       <div className={styles.Contact}>
         <span className={styles.TextBox}>
           <LocalPhoneRoundedIcon

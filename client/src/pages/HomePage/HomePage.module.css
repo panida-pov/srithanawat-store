@@ -5,13 +5,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  overflow: auto;
 }
 
 .TextContainer {
-  width: 50%;
-  min-width: 21rem;
+  width: 45%;
   height: 80%;
   padding: 0rem 2rem;
   display: flex;
@@ -34,13 +31,15 @@
 }
 
 .ImgContainer {
-  width: 30%;
-  min-width: 15rem;
+  width: 45%;
+  padding-right: 2rem;
+  text-align: center;
 }
 
 .ImgContainer img {
   width: 100%;
   height: auto;
+  min-width: 300px;
 }
 
 .Button {
@@ -69,4 +68,30 @@
 .Button button:hover {
   cursor: pointer;
   background-color: #c1e5f5;
+}
+
+@media only screen and (max-width: 950px) {
+  .Banner {
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .TextContainer {
+    width: 100%;
+    height: 60%;
+    padding: 2% 10%;
+  }
+
+  .ImgContainer {
+    width: 100%;
+    height: 40%;
+    padding: 0% 6% 4% 6%;
+  }
+
+  .ImgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+  }
 }

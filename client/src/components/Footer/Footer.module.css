@@ -11,23 +11,18 @@
   padding: 0.5rem 0rem;
 }
 
+.Logo {
+  display: flex;
+  width: 40%;
+}
+
 .Footer img {
   height: 4rem;
   width: auto;
   margin: 0rem 0.4rem;
 }
 
-.Footer p {
-  vertical-align: middle;
-}
-
-.Footer span {
-  display: table-cell;
-  vertical-align: middle;
-}
-
 .Address {
-  width: 30%;
   min-width: 15rem;
   display: flex;
   flex-direction: column;
@@ -55,4 +50,25 @@ span.TextBox {
   line-height: normal;
   display: flex;
   align-items: center;
+}
+
+@media only screen and (max-width: 925px) {
+  .Footer {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .Logo,
+  .Contact,
+  .BusinessHours {
+    width: 100%;
+    padding-left: 5%;
+  }
+
+  .Footer img {
+    height: 2rem;
+    margin: 1% 0%;
+  }
 }

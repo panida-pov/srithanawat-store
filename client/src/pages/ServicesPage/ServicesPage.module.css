@@ -16,7 +16,6 @@
   position: relative;
   top: 15%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -39,7 +38,7 @@
 
 .Box p {
   width: 80%;
-  height: 10vh;
+  height: 28%;
   text-align: center;
 }
 
@@ -77,4 +76,29 @@
 
 #box3 .Circle {
   background-color: #c1e5f5;
+}
+
+@media only screen and (max-width: 780px) {
+  .BoxContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .PageContainer {
+    height: 130vh;
+  }
+
+  .Box {
+    width: 80%;
+    height: 32vh;
+  }
+
+  .BoxContainer {
+    top: 5%;
+  }
+
+  .PageContainer h1 {
+    top: 5%;
+  }
 }
