@@ -1,0 +1,80 @@
+.PageContainer {
+  height: 70vh;
+  width: 100%;
+  background-color: #f8fcfe;
+}
+
+.PageContainer h1 {
+  position: relative;
+  top: 10%;
+  color: #215f9a;
+  font-size: 1.5rem;
+  padding-left: 10%;
+}
+
+.BoxContainer {
+  position: relative;
+  top: 15%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Box {
+  height: 40vh;
+  width: 20%;
+  min-width: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  padding: 1.2rem 0.2rem 0.2rem 0.2rem;
+  font-size: 0.9rem;
+}
+
+.Box h2 {
+  font-size: 1.2rem;
+}
+
+.Box p {
+  width: 80%;
+  height: 10vh;
+  text-align: center;
+}
+
+.Circle {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#box1 {
+  background-color: #f2f2f2;
+  border: 0.12rem solid #d1d1d1;
+}
+
+#box1 .Circle {
+  background-color: #d9d9d9;
+}
+
+#box2 {
+  background-color: #dceaf7;
+  border: 0.12rem solid #2672b0;
+}
+
+#box2 .Circle {
+  background-color: #215f9a;
+}
+
+#box3 {
+  background-color: #e9f5fb;
+  border: 0.12rem solid #1f8dbf;
+}
+
+#box3 .Circle {
+  background-color: #c1e5f5;
+}
