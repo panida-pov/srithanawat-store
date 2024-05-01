@@ -1,0 +1,20 @@
+.Tag {
+  width: fit-content;
+  height: 1.3rem;
+  border-radius: 0.5rem;
+  color: #215f9a;
+  border: 0.05rem solid #215f9a;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  padding: 0rem 0.5rem;
+  margin: 0rem 0.2rem;
+}
+
+.Tag button {
+  cursor: pointer;
+  font-size: 0.65rem;
+  border: 0px;
+  color: #215f9a;
+  padding: 0rem 0rem 0.1rem 0.4rem;
+}

@@ -12,10 +12,17 @@
   width: 80%;
 }
 
-.Content h1 {
+.Header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+}
+
+.Header h1 {
   color: #215f9a;
   font-size: 1.5rem;
-  padding-bottom: 2rem;
+  margin-right: 4%;
 }
 
 .FilterContainer {
@@ -55,18 +62,21 @@
   background-color: #dceaf7;
 }
 
-.FilterBox li:hover .Waterdrop {
-  color: #215f9a;
-}
-
-.Checklist {
-  padding: 0.15rem 5%;
-}
-
 .activeList {
   font-weight: 600;
 }
 
 .activeList .Waterdrop {
   color: #215f9a;
+}
+
+.Tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  height: 1rem;
+}
+
+.Products {
+  /* height: 80%; */
 }
