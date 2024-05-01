@@ -13,5 +13,5 @@ body {
 
 @font-face {
   font-family: "Sukhumvit";
-  src: url("./assets/fonts/SukhumvitSet-Medium.ttf") format("truetype");
+  src: url("../public/assets/fonts/SukhumvitSet-Medium.ttf") format("truetype");
 }

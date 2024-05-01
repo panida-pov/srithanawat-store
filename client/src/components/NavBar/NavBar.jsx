@@ -1,5 +1,4 @@
 import styles from "./NavBar.module.css";
-import logo from "../../assets/images/web_logo.jpg";
 import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
 import { NavLink } from "react-router-dom";
 
@@ -33,7 +32,7 @@ function NavBar() {
   return (
     <div className={styles.Header}>
       <div className={styles.Logo}>
-        <img src={logo} alt="Logo" />
+        <img src="./assets/images/web_logo.jpg" alt="Logo" />
         <div className={styles.StoreName}>
           <h1>ศรีธนาวัฒน์</h1>
           <h2>SRITHANAWAT</h2>

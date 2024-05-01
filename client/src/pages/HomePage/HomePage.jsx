@@ -1,5 +1,4 @@
 import styles from "./HomePage.module.css";
-import bannerImg_1 from "../../assets/images/banner_1.jpg";
 import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
 import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
 import { useNavigate } from "react-router-dom";
@@ -52,7 +51,7 @@ function HomePage() {
         </div>
 
         <div className={styles.ImgContainer}>
-          <img src={bannerImg_1} alt="banner img"></img>
+          <img src="./assets/images/banner_1.jpg" alt="banner img"></img>
         </div>
       </div>
     </>

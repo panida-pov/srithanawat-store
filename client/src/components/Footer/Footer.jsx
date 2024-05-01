@@ -1,5 +1,4 @@
 import styles from "./Footer.module.css";
-import logo from "../../assets/images/web_logo.jpg";
 import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
 import MailOutlineRoundedIcon from "@mui/icons-material/MailOutlineRounded";
 import AccessTimeRoundedIcon from "@mui/icons-material/AccessTimeRounded";
@@ -8,7 +7,7 @@ function Footer() {
   return (
     <div className={styles.Footer}>
       <div className={styles.Logo}>
-        <img src={logo} alt="Logo" />
+        <img src="./assets/images/web_logo.jpg" alt="Logo" />
         <div className={styles.Address}>
           <p style={{ fontSize: "1.25rem" }}>ศรีธนาวัฒน์</p>
           <p>
