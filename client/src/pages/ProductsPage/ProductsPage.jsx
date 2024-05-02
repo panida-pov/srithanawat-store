@@ -1,11 +1,15 @@
 import styles from "./ProductsPage.module.css";
 import WaterDropIcon from "@mui/icons-material/WaterDrop";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Tag from "../../components/Tag/Tag";
 import Checkbox from "../../components/Checkbox/Checkbox";
 import Searchbar from "../../components/Searchbar/Searchbar";
-import Product from "../../components/Product/Product";
+import ProductList from "../../components/ProductList/ProductList";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import { data } from "../../data/data";
+import { helper } from "../../utils/helper";
 
 function ProductsPage() {
   // -- Product category/price/brand to be displayed --
@@ -26,34 +30,8 @@ function ProductsPage() {
   const brands = ["ท่อน้ำไทย", "SCG"];
   // -------------------------------------------------
 
+  // select and render product category
   const [selectCategory, setSelectCategory] = useState("สินค้าทั้งหมด");
-  const [selectPrice, setSelectPrice] = useState(
-    prices.reduce((obj, price) => ({ ...obj, [price]: false }), {})
-  );
-  const [selectBrand, setSelectBrand] = useState(
-    brands.reduce((obj, brand) => ({ ...obj, [brand]: false }), {})
-  );
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const handleSelectPrice = ({ target }) => {
-    setSelectPrice((prev) => ({
-      ...prev,
-      [target.value]: !selectPrice[target.value],
-    }));
-  };
-  const handleSelectBrand = ({ target }) => {
-    setSelectBrand((prev) => ({
-      ...prev,
-      [target.value]: !selectBrand[target.value],
-    }));
-  };
-  const handleSearch = ({ target }) => {
-    setSearchTerm(target.value);
-  };
-  const clearSearch = () => {
-    setSearchTerm("");
-  };
-
   const renderCategories = () => {
     return categories.map((category) => {
       return (
@@ -72,6 +50,35 @@ function ProductsPage() {
       );
     });
   };
+  const renderCategoryTag = () => {
+    return (
+      <Tag key={selectCategory} value={selectCategory} button={false}></Tag>
+    );
+  };
+
+  // select product price range
+  const [selectPrice, setSelectPrice] = useState(
+    prices.reduce((obj, price) => ({ ...obj, [price]: false }), {})
+  );
+  const handleSelectPrice = ({ target }) => {
+    setSelectPrice((prev) => ({
+      ...prev,
+      [target.value]: !selectPrice[target.value],
+    }));
+  };
+
+  // select product brand
+  const [selectBrand, setSelectBrand] = useState(
+    brands.reduce((obj, brand) => ({ ...obj, [brand]: false }), {})
+  );
+  const handleSelectBrand = ({ target }) => {
+    setSelectBrand((prev) => ({
+      ...prev,
+      [target.value]: !selectBrand[target.value],
+    }));
+  };
+
+  // render checkbox for selecting price range and brand
   const renderCheckbox = (items, stateObj, handler) => {
     return items.map((item) => {
       return (
@@ -84,11 +91,8 @@ function ProductsPage() {
       );
     });
   };
-  const renderCategoryTag = () => {
-    return (
-      <Tag key={selectCategory} value={selectCategory} button={false}></Tag>
-    );
-  };
+
+  // render tags for selected price range and brand
   const renderTags = (stateObj, handler) => {
     return Object.keys(stateObj).map((item) => {
       return (
@@ -99,9 +103,45 @@ function ProductsPage() {
     });
   };
 
+  // search for product
+  const [searchTerm, setSearchTerm] = useState("");
+  const handleSearch = ({ target }) => {
+    setSearchTerm(target.value);
+  };
+  const clearSearch = () => {
+    setSearchTerm("");
+  };
+
+  // filter products using helper function
+  const filteredProducts = helper.filterAll({
+    products: data.products,
+    category: selectCategory,
+    prices: selectPrice,
+    brands: selectBrand,
+    search: searchTerm,
+  });
+
+  // close filter menu
+  const [open, setOpen] = useState(false);
+  const ref = useRef();
+  useEffect(() => {
+    const checkClickedOutside = (e) => {
+      if (open && ref.current && !ref.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", checkClickedOutside);
+    return () => {
+      document.removeEventListener("mousedown", checkClickedOutside);
+    };
+  }, [open]);
+
   return (
-    <div className={styles.ProductPage}>
-      <div className={styles.FilterContainer}>
+    <div className={open ? styles.overlay : styles.ProductPage}>
+      <div
+        ref={ref}
+        className={open ? styles.FilterContainer : styles.inactive}
+      >
         <div className={styles.FilterBox}>
           <h2>
             <ShoppingCartOutlinedIcon
@@ -127,21 +167,34 @@ function ProductsPage() {
 
       <div className={styles.Content}>
         <div className={styles.Header}>
+          <button
+            type="button"
+            className={styles.Button}
+            onClick={() => setOpen(true)}
+          >
+            {open ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+          </button>
           <h1>สินค้าของเรา</h1>
-          <Searchbar
-            searchTerm={searchTerm}
-            handleSearch={handleSearch}
-            clearSearch={clearSearch}
-            category={selectCategory}
-          />
+          <div className={styles.Searchbar}>
+            <Searchbar
+              searchTerm={searchTerm}
+              handleSearch={handleSearch}
+              clearSearch={clearSearch}
+              category={selectCategory}
+            />
+          </div>
         </div>
         <div className={styles.Tags}>
           {renderCategoryTag()}
           {renderTags(selectPrice, handleSelectPrice)}
           {renderTags(selectBrand, handleSelectBrand)}
         </div>
-        <div className={styles.Products}>
-          <Product />
+        <div className={styles.ProductList}>
+          {filteredProducts.length ? (
+            <ProductList products={filteredProducts} />
+          ) : (
+            <h3 className={styles.NotFound}>ไม่พบสินค้าที่ท่านกำลังค้นหา</h3>
+          )}
         </div>
       </div>
     </div>
