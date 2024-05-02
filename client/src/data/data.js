@@ -1,3 +1,4 @@
+//sample data
 export const data = {
   products: [
     {
@@ -8,7 +9,7 @@ export const data = {
       brand: "ท่อน้ำไทย",
       price: "12",
       details: "หนา 1 นิ้ว",
-      image_url: "./../src/assets/images/product_1.jpg",
+      image_url: "./assets/images/product_1.jpg",
     },
     {
       id: 2,
@@ -18,7 +19,7 @@ export const data = {
       brand: "SCG",
       price: "7",
       details: "หนา 1/2 นิ้ว",
-      image_url: "./../src/assets/images/product_2.jpg",
+      image_url: "./assets/images/product_2.jpg",
     },
     {
       id: 3,
@@ -28,7 +29,7 @@ export const data = {
       brand: "SCG",
       price: "60",
       details: "หนา 2 1/2 นิ้ว",
-      image_url: "./../src/assets/images/product_3.jpg",
+      image_url: "./assets/images/product_3.jpg",
     },
     {
       id: 4,
@@ -38,7 +39,7 @@ export const data = {
       brand: "SANWA",
       price: "250",
       details: "SANWA JET CWT15",
-      image_url: "./../src/assets/images/product_4.jpg",
+      image_url: "./assets/images/product_4.jpg",
     },
     {
       id: 5,
@@ -48,7 +49,7 @@ export const data = {
       brand: "DEXZON",
       price: "250",
       details: "ขนาด 1 นิ้ว",
-      image_url: "./../src/assets/images/product_5.jpg",
+      image_url: "./assets/images/product_5.jpg",
     },
     {
       id: 6,
@@ -58,7 +59,7 @@ export const data = {
       brand: "SEFCO",
       price: "280",
       details: "ขนาด 3.5 ลิตร",
-      image_url: "./../src/assets/images/product_6.jpg",
+      image_url: "./assets/images/product_6.jpg",
     },
     {
       id: 7,
@@ -68,7 +69,7 @@ export const data = {
       brand: "SEFCO",
       price: "280",
       details: "ขนาด 3.5 ลิตร",
-      image_url: "./../src/assets/images/product_6.jpg",
+      image_url: "./assets/images/product_6.jpg",
     },
   ],
 };

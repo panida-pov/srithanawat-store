@@ -3,7 +3,10 @@ import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 import ClearIcon from "@mui/icons-material/Clear";
 function Searchbar(props) {
   return (
-    <form className={styles.SearchBar}>
+    <form
+      className={styles.SearchBar}
+      onSubmit={(event) => event.preventDefault()}
+    >
       <button type="submit">
         <SearchRoundedIcon style={{ fontSize: "1.2rem", color: "#3e5f7e" }} />
       </button>

@@ -10,7 +10,7 @@ function HomePage() {
       <div className={styles.Banner}>
         <div className={styles.TextContainer}>
           <h1>
-            ไว้ใจเรา... เรื่อง <span style={{ fontSize: "3rem" }}>"ประปา"</span>
+            ไว้ใจเรา... เรื่อง <span className={styles.highlight}>"ประปา"</span>
           </h1>
           <div className={styles.TextBox}>
             <CheckCircleOutlinedIcon />

@@ -1,8 +1,7 @@
 import styles from "./ContactPage.module.css";
-import ServiceStyles from "../ServicesPage/ServicesPage.module.css";
 function ContactPage() {
   return (
-    <div className={ServiceStyles.PageContainer}>
+    <div className={styles.PageContainer}>
       <h1>ติดต่อเรา</h1>
       <div className={styles.Map}>
         <iframe
