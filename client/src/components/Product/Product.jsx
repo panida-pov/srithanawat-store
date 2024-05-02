@@ -1,30 +1,38 @@
+import { useState } from "react";
+import ProductDetails from "../ProductDetails/ProductDetails";
 import styles from "./Product.module.css";
 
-function Product() {
-  const sample = {
-    id: 1,
-    name: "ข้องอ 90 องศา 1 นิ้ว",
-    category: "ข้อต่อPVC",
-    color: "สีฟ้า",
-    brand: "ท่อน้ำไทย",
-    price: 12,
-    details: "หนา 1 นิ้ว",
-    image_url: "./assets/images/product_1.jpg",
+function Product({ product }) {
+  const [showDetails, setShowDetails] = useState(false);
+
+  const closeDetails = () => {
+    setShowDetails(false);
   };
 
   return (
-    <div className={styles.product}>
-      <div className={styles.overlay}>
-        <div className={styles.image}>
-          <img src={sample.image_url} alt={sample.name} />
+    <>
+      <div className={styles.product} onClick={() => setShowDetails(true)}>
+        <div className={styles.overlay}>
+          <div className={styles.image}>
+            <img
+              src={product.image_url}
+              alt={product.name}
+              onError={({ target }) =>
+                (target.src = "./assets/images/no_img.jpg")
+              }
+            />
+          </div>
+          <div className={styles.view}>
+            <div className={styles.text}>Click to view</div>
+          </div>
         </div>
-        <div className={styles.view}>
-          <div className={styles.text}>Click to view</div>
-        </div>
+        <p className={styles.productName}>{product.name}</p>
+        <p className={styles.productPrice}>{`฿${product.price || " -"}`}</p>
       </div>
-      <p className={styles.productName}>{sample.name}</p>
-      <p className={styles.productPrice}>{`฿${sample.price.toFixed(2)}`}</p>
-    </div>
+      {showDetails && (
+        <ProductDetails product={product} closeDetails={closeDetails} />
+      )}
+    </>
   );
 }
 
