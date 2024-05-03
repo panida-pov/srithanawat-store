@@ -51,10 +51,7 @@ function HomePage() {
         </div>
 
         <div className={styles.ImgContainer}>
-          <img
-            src="./srithanawat-store/assets/images/banner_1.jpg"
-            alt="banner img"
-          ></img>
+          <img src="./assets/images/banner_1.jpg" alt="banner img"></img>
         </div>
       </div>
     </>
