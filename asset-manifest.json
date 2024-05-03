@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "./static/css/main.623b4b8a.css",
-    "main.js": "./static/js/main.7f2b8a00.js",
+    "main.js": "./static/js/main.5f19b258.js",
     "static/js/453.f6992bde.chunk.js": "./static/js/453.f6992bde.chunk.js",
     "static/media/SukhumvitSet-Medium.ttf": "./static/media/SukhumvitSet-Medium.e1fd49b5e0114c002dff.ttf",
     "index.html": "./index.html",
     "main.623b4b8a.css.map": "./static/css/main.623b4b8a.css.map",
-    "main.7f2b8a00.js.map": "./static/js/main.7f2b8a00.js.map",
+    "main.5f19b258.js.map": "./static/js/main.5f19b258.js.map",
     "453.f6992bde.chunk.js.map": "./static/js/453.f6992bde.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.623b4b8a.css",
-    "static/js/main.7f2b8a00.js"
+    "static/js/main.5f19b258.js"
   ]
 }
