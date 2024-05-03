@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "./static/css/main.623b4b8a.css",
-    "main.js": "./static/js/main.0e9ac5c5.js",
-    "static/js/453.f6992bde.chunk.js": "./static/js/453.f6992bde.chunk.js",
-    "static/media/SukhumvitSet-Medium.ttf": "./static/media/SukhumvitSet-Medium.e1fd49b5e0114c002dff.ttf",
-    "index.html": "./index.html",
-    "main.623b4b8a.css.map": "./static/css/main.623b4b8a.css.map",
-    "main.0e9ac5c5.js.map": "./static/js/main.0e9ac5c5.js.map",
-    "453.f6992bde.chunk.js.map": "./static/js/453.f6992bde.chunk.js.map"
+    "main.css": "/srithanawat-store/static/css/main.1d00ceb3.css",
+    "main.js": "/srithanawat-store/static/js/main.bd86076e.js",
+    "static/js/453.f6992bde.chunk.js": "/srithanawat-store/static/js/453.f6992bde.chunk.js",
+    "static/media/SukhumvitSet-Medium.ttf": "/srithanawat-store/static/media/SukhumvitSet-Medium.e1fd49b5e0114c002dff.ttf",
+    "index.html": "/srithanawat-store/index.html",
+    "main.1d00ceb3.css.map": "/srithanawat-store/static/css/main.1d00ceb3.css.map",
+    "main.bd86076e.js.map": "/srithanawat-store/static/js/main.bd86076e.js.map",
+    "453.f6992bde.chunk.js.map": "/srithanawat-store/static/js/453.f6992bde.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.623b4b8a.css",
-    "static/js/main.0e9ac5c5.js"
+    "static/css/main.1d00ceb3.css",
+    "static/js/main.bd86076e.js"
   ]
 }
