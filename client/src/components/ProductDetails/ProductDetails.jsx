@@ -16,7 +16,7 @@ function ProductDetails(props) {
           <img
             src={props.product.image_url}
             onError={({ target }) => {
-              target.src = "./assets/images/no_img.jpg";
+              target.src = `${process.env.PUBLIC_URL}/assets/images/no_img.jpg`;
             }}
             alt={props.product.name}
           />

@@ -7,7 +7,10 @@ function Footer() {
   return (
     <div className={styles.Footer}>
       <div className={styles.Logo}>
-        <img src="./assets/images/web_logo.jpg" alt="Logo" />
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/images/web_logo.jpg`}
+          alt="Logo"
+        />
         <div className={styles.Address}>
           <p style={{ fontSize: "1.25rem" }}>ศรีธนาวัฒน์</p>
           <p>

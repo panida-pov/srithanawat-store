@@ -18,7 +18,7 @@ function Product({ product }) {
               src={product.image_url}
               alt={product.name}
               onError={({ target }) =>
-                (target.src = "./assets/images/no_img.jpg")
+                (target.src = `${process.env.PUBLIC_URL}/assets/images/no_img.jpg`)
               }
             />
           </div>

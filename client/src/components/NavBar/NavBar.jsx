@@ -32,7 +32,10 @@ function NavBar() {
   return (
     <div className={styles.Header}>
       <div className={styles.Logo}>
-        <img src="./assets/images/web_logo.jpg" alt="Logo" />
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/images/web_logo.jpg`}
+          alt="Logo"
+        />
         <div className={styles.StoreName}>
           <h1>ศรีธนาวัฒน์</h1>
           <h2>SRITHANAWAT</h2>

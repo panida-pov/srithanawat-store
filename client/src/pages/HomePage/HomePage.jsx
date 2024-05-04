@@ -51,7 +51,10 @@ function HomePage() {
         </div>
 
         <div className={styles.ImgContainer}>
-          <img src="./assets/images/banner_1.jpg" alt="banner img"></img>
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/images/banner_1.jpg`}
+            alt="banner img"
+          ></img>
         </div>
       </div>
     </>
