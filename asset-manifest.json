@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/srithanawat-store/static/css/main.1d00ceb3.css",
-    "main.js": "/srithanawat-store/static/js/main.8b526986.js",
+    "main.js": "/srithanawat-store/static/js/main.773843df.js",
     "static/js/453.f6992bde.chunk.js": "/srithanawat-store/static/js/453.f6992bde.chunk.js",
     "static/media/SukhumvitSet-Medium.ttf": "/srithanawat-store/static/media/SukhumvitSet-Medium.e1fd49b5e0114c002dff.ttf",
     "index.html": "/srithanawat-store/index.html",
     "main.1d00ceb3.css.map": "/srithanawat-store/static/css/main.1d00ceb3.css.map",
-    "main.8b526986.js.map": "/srithanawat-store/static/js/main.8b526986.js.map",
+    "main.773843df.js.map": "/srithanawat-store/static/js/main.773843df.js.map",
     "453.f6992bde.chunk.js.map": "/srithanawat-store/static/js/453.f6992bde.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1d00ceb3.css",
-    "static/js/main.8b526986.js"
+    "static/js/main.773843df.js"
   ]
 }
